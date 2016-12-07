@@ -4,14 +4,14 @@
 Go to <a href="https://julia-kudinovich.github.io/frontend-nanodegree-mobile-portfolio/" target="_blank">here</a> to open the application directly from my GitHub page.
 
 ### Optimization made to index.html
-- minified css and js files
-- optimized images
-- set js scripts to async
-- added style-smartphone.css to css folder and initialized it with *media = "screen and (max-width: 480px)*
-- added *media="print"* to print.css
-- inlined critical css ctyles
-- moved style.css to the bottom of the body tag
-- removed link to google font
+- Minified css and js files
+- Optimized images
+- Set js scripts to async
+- Added style-smartphone.css to css folder and initialized it with *media = "screen and (max-width: 480px)*
+- Added *media="print"* to print.css
+- Inlined critical css ctyles
+- Moved style.css to the bottom of the body tag
+- Loaded Google font asynchronously using Web Font Loader library and moved it to the bottom of the body tag
 
 
 ###Optimization made to views/js/main.js
