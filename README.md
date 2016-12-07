@@ -1,7 +1,7 @@
 
 ### How to run the application
 
-Go to <a href="https://julia-kudinovich.github.io/frontend-nanodegree-mobile-portfolio/" target="_blank">here</a> to open the application directly from my GitHub page.
+Go <a href="https://julia-kudinovich.github.io/frontend-nanodegree-mobile-portfolio/" target="_blank">here</a> to open the application directly from my GitHub page.
 
 ### Optimization made to index.html
 - Minified css and js files
@@ -22,4 +22,6 @@ Go to <a href="https://julia-kudinovich.github.io/frontend-nanodegree-mobile-por
 - Moved document.querySelector("#movingPizzas1") outside of the for loop to avoid style recalculation
 - Added *translateZ(0)* and *transform* to moving pizzas elements
 - Optimized *resizePizzas()* function to not use *determineDx()* function and calculate size of pizzas more directly
+- Changed *document.querySelectorAll()* to *getElementsBy* method.
+- Created position array to hold all the possible phases since there are only 5 unique values for phases for every scroll and we do not need to calculate them on every scroll.
 

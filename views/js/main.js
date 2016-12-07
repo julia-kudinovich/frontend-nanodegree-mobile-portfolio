@@ -522,9 +522,17 @@ function updatePositions() {
   //Moved part of the phase definition out of the loop to avoid layout recalculating
   var phase = document.body.scrollTop / 1250;
 
+//Array of possible position of pizza
+  var position = new Array();
+
+//Loop to add possible values to the position array
   for (var i = 0; i < itemsLength; i++) {
     phase = Math.sin((phase) + (i % 5));
-    items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
+    position.push(phase);
+  }
+
+  for (var i = 0; i < itemsLength; i++) {
+    items[i].style.left = items[i].basicLeft + 100 * position[i]+ 'px';
   }
 
   // User Timing API to the rescue again. Seriously, it's worth learning.
@@ -545,7 +553,7 @@ window.addEventListener('scroll', requestAnimationFrame(updatePositions));
 document.addEventListener('DOMContentLoaded', function() {
   var cols = 8;
   var s = 256;
-  var movingPizzas = document.querySelector("#movingPizzas1");
+  var movingPizzas = document.getElementById("movingPizzas1");
   //Reduced the number of pizzas to 50
   for (var i = 0; i < 50; i++) {
     var elem = document.createElement('img');
